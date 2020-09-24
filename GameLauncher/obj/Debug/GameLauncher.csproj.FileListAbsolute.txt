@@ -1,0 +1,10 @@
+C:\Users\Matthew\Repos\GameLauncher\GameLauncher\bin\Debug\GameLauncher.exe.config
+C:\Users\Matthew\Repos\GameLauncher\GameLauncher\bin\Debug\GameLauncher.exe
+C:\Users\Matthew\Repos\GameLauncher\GameLauncher\bin\Debug\GameLauncher.pdb
+C:\Users\Matthew\Repos\GameLauncher\GameLauncher\obj\Debug\GameLauncher.csprojAssemblyReference.cache
+C:\Users\Matthew\Repos\GameLauncher\GameLauncher\obj\Debug\GameLauncher.GameLauncher.resources
+C:\Users\Matthew\Repos\GameLauncher\GameLauncher\obj\Debug\GameLauncher.Properties.Resources.resources
+C:\Users\Matthew\Repos\GameLauncher\GameLauncher\obj\Debug\GameLauncher.csproj.GenerateResource.cache
+C:\Users\Matthew\Repos\GameLauncher\GameLauncher\obj\Debug\GameLauncher.csproj.CoreCompileInputs.cache
+C:\Users\Matthew\Repos\GameLauncher\GameLauncher\obj\Debug\GameLauncher.exe
+C:\Users\Matthew\Repos\GameLauncher\GameLauncher\obj\Debug\GameLauncher.pdb
