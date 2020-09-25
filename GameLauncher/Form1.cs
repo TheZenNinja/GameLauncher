@@ -29,7 +29,7 @@ namespace GameLauncher
         }
         public Version(string vers)
         {
-            string[] parts = vers.Split('.');
+            string[] parts = vers.Replace("v", "").Split('.');
             if (parts.Length != 3)
             {
                 major = 0;
@@ -54,19 +54,19 @@ namespace GameLauncher
             return true;
         }
         public static bool operator !=(Version a, Version b) => !(a == b);
-        public override string ToString() => $"V{major}.{minor}.{patch}";
-
+        public override string ToString() => $"{major}.{minor}.{patch}";
     }
     public partial class GameLauncher : Form
     {
+        //https://www.youtube.com/watch?v=JIjZQo03YdA&feature=youtu.be
         private string rootPath;
         private string versionFile;
-        private string gameZip;
-        private string gameExe;
+        private string gameZipPath;
+        private string gameExePath;
         private string gameName = "Game.exe";
 
-        private string versionDL;
-        private string gameDL;
+        private string versionDL = "https://github.com/TheZenNinja/BuiltGames/releases/download/ExtDL/Version.txt";
+        private string gameDL = "https://github.com/TheZenNinja/BuiltGames/releases/download/ExtDL/Build.zip";
 
         private LauncherStatus _status;
         public LauncherStatus Status
@@ -99,21 +99,22 @@ namespace GameLauncher
             InitializeComponent();
 
             rootPath = Directory.GetCurrentDirectory();
+            Console.WriteLine(rootPath);
             versionFile = Path.Combine(rootPath, "Version.txt");
-            gameZip = Path.Combine(rootPath, "Build.zip");
-            gameExe = Path.Combine(rootPath, "Build", gameName);
-            
+            gameZipPath = Path.Combine(rootPath, "Build.zip");
+            gameExePath = Path.Combine(rootPath, "Build", gameName);
+
             CheckForUpdates();
         }
 
         private void btnPlay_Click(object sender, EventArgs e)
         {
-            if (File.Exists(gameExe) && Status == LauncherStatus.ready)
+            if (File.Exists(gameExePath) && Status == LauncherStatus.ready)
             {
-                ProcessStartInfo startInfo = new ProcessStartInfo(gameExe);
-                startInfo.WorkingDirectory = Path.Combine(rootPath, "Build");
-                Process.Start(startInfo);
-
+                //ProcessStartInfo startInfo = new ProcessStartInfo(gameExePath);
+                //startInfo.WorkingDirectory = Path.Combine(rootPath, "Build");
+                //Process.Start(startInfo);
+                MessageBox.Show("Launched Game");
                 Close();
             }
             else if (Status == LauncherStatus.failed)
@@ -126,13 +127,13 @@ namespace GameLauncher
             if (File.Exists(versionFile))
             {
                 Version localVersion = new Version(File.ReadAllText(versionFile));
-                lblVersion.Text = localVersion.ToString();
+                lblVersion.Text = "V" + localVersion.ToString();
 
                 try
                 {
                     WebClient webClient = new WebClient();
                     Version onlineVersion = new Version(webClient.DownloadString(versionDL));
-
+                    Console.WriteLine(onlineVersion.ToString());
                     if (onlineVersion != localVersion)
                         InstallGameFiles(true, onlineVersion);
                     else
@@ -163,7 +164,7 @@ namespace GameLauncher
                 }
 
                 webClient.DownloadFileCompleted += new AsyncCompletedEventHandler(DownloadGameCompletedCallback);
-                webClient.DownloadFileAsync(new Uri(gameDL), gameZip, _onlineVersion);
+                webClient.DownloadFileAsync(new Uri(gameDL), gameZipPath, _onlineVersion);
             }
             catch (Exception ex)
             {
@@ -176,12 +177,12 @@ namespace GameLauncher
             try
             {
                 string onlineVersion = ((Version)e.UserState).ToString();
-                ZipFile.ExtractToDirectory(gameZip, rootPath);
-                File.Delete(gameZip);
+                ZipFile.ExtractToDirectory(gameZipPath, rootPath, true);
+                File.Delete(gameZipPath);
 
                 File.WriteAllText(versionFile, onlineVersion);
 
-                lblVersion.Text = onlineVersion;
+                lblVersion.Text = "V" + onlineVersion;
                 Status = LauncherStatus.ready;
             }
             catch (Exception ex)

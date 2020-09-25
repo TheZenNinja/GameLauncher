@@ -1,0 +1,15 @@
+C:\Users\Matthew\Repos\GameLauncher\GameLauncher\bin\Debug\netcoreapp3.1\GameLauncher.exe
+C:\Users\Matthew\Repos\GameLauncher\GameLauncher\bin\Debug\netcoreapp3.1\GameLauncher.deps.json
+C:\Users\Matthew\Repos\GameLauncher\GameLauncher\bin\Debug\netcoreapp3.1\GameLauncher.runtimeconfig.json
+C:\Users\Matthew\Repos\GameLauncher\GameLauncher\bin\Debug\netcoreapp3.1\GameLauncher.runtimeconfig.dev.json
+C:\Users\Matthew\Repos\GameLauncher\GameLauncher\bin\Debug\netcoreapp3.1\GameLauncher.dll
+C:\Users\Matthew\Repos\GameLauncher\GameLauncher\bin\Debug\netcoreapp3.1\GameLauncher.pdb
+C:\Users\Matthew\Repos\GameLauncher\GameLauncher\obj\Debug\netcoreapp3.1\GameLauncher.csprojAssemblyReference.cache
+C:\Users\Matthew\Repos\GameLauncher\GameLauncher\obj\Debug\netcoreapp3.1\GameLauncher.GameLauncher.resources
+C:\Users\Matthew\Repos\GameLauncher\GameLauncher\obj\Debug\netcoreapp3.1\GameLauncher.csproj.GenerateResource.cache
+C:\Users\Matthew\Repos\GameLauncher\GameLauncher\obj\Debug\netcoreapp3.1\GameLauncher.AssemblyInfoInputs.cache
+C:\Users\Matthew\Repos\GameLauncher\GameLauncher\obj\Debug\netcoreapp3.1\GameLauncher.AssemblyInfo.cs
+C:\Users\Matthew\Repos\GameLauncher\GameLauncher\obj\Debug\netcoreapp3.1\GameLauncher.csproj.CoreCompileInputs.cache
+C:\Users\Matthew\Repos\GameLauncher\GameLauncher\obj\Debug\netcoreapp3.1\GameLauncher.dll
+C:\Users\Matthew\Repos\GameLauncher\GameLauncher\obj\Debug\netcoreapp3.1\GameLauncher.pdb
+C:\Users\Matthew\Repos\GameLauncher\GameLauncher\obj\Debug\netcoreapp3.1\GameLauncher.genruntimeconfig.cache
