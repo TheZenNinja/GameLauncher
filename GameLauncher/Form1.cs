@@ -65,8 +65,8 @@ namespace GameLauncher
         private string gameExePath;
         private string gameName = "Game.exe";
 
-        private string versionDL = "https://github.com/TheZenNinja/BuiltGames/releases/download/ExtDL/Version.txt";
-        private string gameDL = "https://github.com/TheZenNinja/BuiltGames/releases/download/ExtDL/Build.zip";
+        private string versionDL = "https://github.com/TheZenNinja/2DRoguelike/releases/download/ExtDL/Version.txt";
+        private string gameDL = "https://github.com/TheZenNinja/2DRoguelike/releases/download/ExtDL/Build.zip";
 
         private LauncherStatus _status;
         public LauncherStatus Status
